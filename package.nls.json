@@ -1,0 +1,9 @@
+{
+    "displayName": "表外漢字チェッカー",
+    "description": "テキスト内の表外漢字（人名用漢字を含む常用外漢字）を強調表示させます。",
+    "configuration.title": "表外漢字チェッカー",
+    "configuration.decorationStyle.desc": "表外漢字の強調スタイルを設定します。",
+    "configuration.jinmeiyoDecorationStyle.desc": "人名用漢字の強調スタイルを設定します。",
+    "configuration.enabled.desc": "表外漢字チェッカーを有効にします。",
+    "hyogaiKanjiChecker.toggle.title": "表外漢字チェッカー切り替え"
+}

@@ -1,0 +1,84 @@
+{
+	"name": "hyogai-kanji-checker",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "0.1.0",
+	"license": "MIT",
+	"publisher": "noy-shimotsuki",
+	"repository": {
+		"url": "https://github.com/noy-shimotsuki/hyogai-kanji-checker"
+	},
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"keywords": [
+		"常用漢字",
+		"表外漢字",
+		"人名用漢字",
+		"校正",
+		"joyo kanji",
+		"hyogai kanji",
+		"jinmeiyo kanji",
+		"日本語",
+		"japanese"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "hyogaiKanjiChecker.toggle",
+				"title": "%hyogaiKanjiChecker.toggle.title%"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "hyogaiKanjiChecker.toggle"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "hyogaiKanjiChecker.toggle"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "%configuration.title%",
+			"properties": {
+				"hyogaiKanjiChecker.decorationStyle": {
+					"type": "string",
+					"default": "text-decoration: #0080ff wavy underline",
+					"description": "%configuration.decorationStyle.desc%"
+				},
+				"hyogaiKanjiChecker.jinmeiyoDecorationStyle": {
+					"type": "string",
+					"default": "text-decoration: #808080 wavy underline",
+					"description": "%configuration.jinmeiyoDecorationStyle.desc%"
+				},
+				"hyogaiKanjiChecker.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "%configuration.enabled.desc%"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.42.0",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4"
+	}
+}
